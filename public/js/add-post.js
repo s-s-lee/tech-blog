@@ -3,8 +3,8 @@ const newPostCard = document.querySelector('#new-post-card');
 
 const showCard = async (event) => {
     event.preventDefault();
-    newPostButton.classList.add('hide');
     newPostCard.classList.remove('hide');
+    newPostButton.classList.add('hide');
 };
 
 const addNewPost = async (event) => {
@@ -22,8 +22,8 @@ const addNewPost = async (event) => {
             },
         });
         if (response.ok) {
-            newPostButton.classList.remove('hide');
             newPostCard.classList.add('hide');
+            newPostButton.classList.remove('hide');            
             window.location.reload();
         } else {
             // newPostButton.classList.remove('hide');

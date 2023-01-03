@@ -5,6 +5,8 @@ An example of a tech blog to post insights and comment on posts
 
 
 
+Link to deployed app: https://mighty-citadel-65868.herokuapp.com/
+
 
 ## User Story
 
