@@ -1,14 +1,49 @@
-<div class="comments text-muted mx-3">
-    <div class="card comments-card border-secondary p-2">
+{{!-- <div class="comments text-muted mx-3">
+    <div class="card comments-card border-info p-2">
         <p>{{comment_text}}</p>
     </div>
     <div class="comment-user">
         <p>{{user.username}}, {{format_date created_on}}</p>
     </div>
-    {{#if blog_poster}}
+    {{#with logged_in}}
+    {{blog_poster}}
+    {{else}}
     <div class="delete-comment">
         <button type="submit" class="btn btn-primary mb-3" data-id="{{comment.id}}" id="delete-comment-btn">Delete comment</button>
     </div>
     <script src="/js/delete-comment.js"></script>
+    {{/with}}
+</div> --}}
+
+{{!-- {{#if logged_in}}
+    {{blog_poster}}
+    <div class="delete-comment">
+        <button type="submit" class="btn btn-primary mb-3" data-id="{{comment.id}}" id="delete-comment-btn">Delete comment</button>
+    </div>
+    <script src="/js/delete-comment.js"></script>
+    {{else}}
+<div class="comments text-muted mx-3">
+    <div class="card comments-card border-info p-2">
+        <p>{{comment_text}}</p>
+    </div>
+    <div class="comment-user">
+        <p>{{user.username}}, {{format_date created_on}}</p>
+    </div>
+</div>
+    {{/if}} --}}
+
+{{!-- original version was --}}
+<div class="comments text-muted mx-3">
+    <div class="card comments-card border-info p-2">
+        <p>{{comment_text}}</p>
+    </div>
+    <div class="comment-user">
+        <p>{{user.username}}, {{format_date created_on}}</p>
+    </div>
+    {{#if logged_in}}
+    <div class="delete-comment">
+        <button type="submit" class="btn btn-primary mb-3" data-id="{{comment.id}}" id="delete-comment-btn">Delete comment</button>
+    </div>
+    {{!-- <script src="/js/delete-comment.js"></script> --}}
     {{/if}}
 </div>

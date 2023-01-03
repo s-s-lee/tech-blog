@@ -1,4 +1,4 @@
-const commentId = window.location.pathname.split('/').pop();
+// const commentId = window.location.pathname.split('/').pop();
 const deleteComment = async (event) => {
     event.preventDefault();
     
@@ -6,7 +6,7 @@ const deleteComment = async (event) => {
         method: 'DELETE',
     });
     if (response.ok) {
-        window.location.href = '/';
+        document.location.href = '/';
     } else {
         alert('Unable to delete comment');
     }
