@@ -8,12 +8,13 @@
         <div class="card-body">
             <form class="p-2" id="new-post-form">
                 <label for="edit-post-title" class="form-label">Blog Post Title</label>
-                <textarea class="form-control" rows="2" placeholder="{{title}}"></textarea>
+                <textarea class="form-control" id="edit-post-title" rows="2" placeholder="{{title}}"></textarea>
                 <label for="edit-post-text" class="form-label">Blog Post Content</label>
-                <textarea class="form-control" rows="4" placeholder="{{post_text}}"></textarea>                
+                <textarea class="form-control" id="edit-post-text" rows="4" placeholder="{{post_content}}"></textarea>     
+                <button type="submit" class="btn btn-primary mt-3" id="edit-post-btn"><i class="fas fa-wrench"></i> Save changes</button>
+                <button type="submit" class="btn btn-danger mt-3" id="delete-post-btn"><i class="fas fa-trash"></i> Delete blog post</button>           
             </form>
-            <button type="submit" class="new-post-btn btn btn-primary mt-3" id="edit-post-btn"><i class="fas fa-wrench"></i> Edit blog post</button>
-            <button type="submit" class="new-post-btn btn btn-danger mt-3" id="delete-post-btn"><i class="fas fa-trash"></i> Delete blog post</button>
+            
         </div>
     </div>
 </div>
@@ -22,7 +23,7 @@
 {{> comment}}
 {{/each}}
 {{> addComment}}
-<script src="../js/edit-post.js"></script>
+<script src="/js/edit-post.js"></script>
 
 {{else}}
 
@@ -35,7 +36,7 @@
             <p class="card-text"><small class="text-muted">Posted by {{user.username}} on {{format_date created_on}}</small></p>
         </div>
         <div class="card-body">
-            <p>{{post_text}}</p>
+            <p>{{post_content}}</p>
         </div>
         {{#each comments as |comment|}}
         {{> comment}}

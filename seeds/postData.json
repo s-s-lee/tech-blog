@@ -2,21 +2,21 @@
     {
         "id": 1,
         "title": "The Best Tech Gifts of 2022",
-        "body": "Here are the best gadgets that were released in 2022.",
+        "post_content": "Here are the best gadgets that were released in 2022.",
         "created_on": "11.15.2022",
         "user_id": 1
     },
     {
         "id": 2,
         "title": "TikTok will be banned from government devices",
-        "body": "Citing concerns about TikTok and similar apps from ByteDance, government-owned devices will not be allowed to install TikTok.",
+        "post_content": "Citing concerns about TikTok and similar apps from ByteDance, government-owned devices will not be allowed to install TikTok.",
         "created_on": "11.15.2022",
         "user_id": 2
     },
     {
         "id": 3,
         "title": "IRS delays Venmo and PayPal tax requirements by one year",
-        "body": "Due to concerns of implementation, the IRS has announced that they will delay the new tax requirements for one year. Businesses that use digital payment apps will have another year to figure out how to adjust accordingly.",
+        "post_content": "Due to concerns of implementation, the IRS has announced that they will delay the new tax requirements for one year. Businesses that use digital payment apps will have another year to figure out how to adjust accordingly.",
         "created_on": "11.15.2022",
         "user_id": 3
     }

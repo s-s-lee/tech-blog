@@ -1,5 +1,4 @@
 {{#each posts as |post|}}
-{{!-- <div class="post-entire"> --}}
     <div class="card">
         <div class="card-header text-center">
             <h3 class="card-title"><a href="/posts/{{id}}">{{post.title}}</a></h3>
@@ -8,8 +7,7 @@
             <p class="card-text"><small class="text-muted">Posted by {{post.user.username}} on {{format_date created_on}}</small></p>
         </div>
         <div class="card-body">
-            <p>{{post_text}}</p>
+            <p>{{post_content}}</p>
         </div>
     </div>
-{{!-- </div> --}}
 {{/each}}

@@ -11,11 +11,11 @@ const editPost = async (event) => {
             method: 'PUT',
             body: JSON.stringify({ title, content }),
             headers: {
-                'Content-type': 'application/json',
+                'Content-Type': 'application/json',
             },
         });
         if (response.ok) {
-            window.location.reload();
+            window.location.href = '/dashboard';
         } else {
             alert('Unable to edit post');
         }

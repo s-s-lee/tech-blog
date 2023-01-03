@@ -35,5 +35,5 @@ const addNewPost = async (event) => {
 
 document
     .querySelector('#new-post-btn')
-    .addEventListener('submit', addNewPost);
-newPostButton.addEventListener('submit', showCard);
+    .addEventListener('click', addNewPost);
+newPostButton.addEventListener('click', showCard);

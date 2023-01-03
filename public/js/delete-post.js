@@ -5,7 +5,7 @@ const deletePost = async (event) => {
         method: 'DELETE',
     });
     if (response.ok) {
-        window.location.reload();
+        window.location.href = '/dashboard';
     } else {
         alert('Unable to delete post');
     }

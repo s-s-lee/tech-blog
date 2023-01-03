@@ -6,7 +6,7 @@ const deleteComment = async (event) => {
         method: 'DELETE',
     });
     if (response.ok) {
-        window.location.reload();
+        window.location.href = '/';
     } else {
         alert('Unable to delete comment');
     }
@@ -14,4 +14,4 @@ const deleteComment = async (event) => {
 
 document
   .querySelector('#delete-comment-btn')
-  .addEventListener('submit', deleteComment);
+  .addEventListener('click', deleteComment);

@@ -4,8 +4,8 @@ const sequelize = require('../config/connection');
 
 class User extends Model {
   // use bcrypt to hash passwords. requires Node.js to be v5 or higher
-  checkPassword(loginPassword) {
-    return bcrypt.compareSync(loginPassword, this.password);
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
@@ -20,6 +20,7 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+			unique: true,
     },
     email: {
       type: DataTypes.STRING,

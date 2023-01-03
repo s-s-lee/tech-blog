@@ -1,23 +1,30 @@
 [
     {
         "id": 1,
-        "comment_text": "Awesome!",
+        "comment_text": "These are so awesome!",
         "created_on": "12.14.2022",
         "user_id": 777,
         "post_id": 1
     },
     {
         "id": 2,
-        "comment_text": "Very cool",
+        "comment_text": "Very cool, hope I can get one of these too",
         "created_on": "12.21.2022",
         "user_id": 555,
         "post_id": 1
     },
     {
         "id": 3,
-        "comment_text": "Amazing",
+        "comment_text": "I don't know anyone who had TikTok on their work phone though",
         "created_on": "12.31.2022",
         "user_id": 888,
-        "post_id": 1
+        "post_id": 2
+    },
+    {
+        "id": 4,
+        "comment_text": "Phew, what a relief!",
+        "created_on": "12.30.2022",
+        "user_id": 888,
+        "post_id": 3
     }
 ]

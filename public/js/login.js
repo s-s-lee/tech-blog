@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
         if (response.ok) {
             // if successful, redirect browser to dashboard
-            window.location.replace('/dashboard');
+            window.location.href = '/dashboard';
         } else {
             alert(response.statusText);
         }

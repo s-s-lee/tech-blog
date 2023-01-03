@@ -6,9 +6,9 @@
             <h3 class="post-title"><a href="/posts/{{id}}">{{title}}</a></h3>
             <div class="post-date">Posted by {{user.username}} at {{format_date created_on}}</div>
         </div>
-        {{!-- <div class="card-body">
-          <p>{{post_text}}</p>
-        </div> --}}
+        <div class="card-body">
+          <p>{{post_content}}</p>
+        </div>
     </div>
 </div>
 {{/each}}

@@ -34,7 +34,7 @@ router.post('/login', async (req, res) => {
         // checks if pw is correct
         const validPassword = await bcrypt.compare(
             req.body.password,
-            userData.password
+            userData.password,
         );
         // if pw doesnt match
         if (!validPassword) {

@@ -5,8 +5,7 @@ const withAuth = require('../../utils/auth');
 // get all blog posts
 router.get('/', (req, res) => {
   Post.findAll({
-    attributes: ['id', 'title', 'post_text', 'created_on'],
-    order: [['created_on', 'DESC']],
+    attributes: ['id', 'title', 'post_content', 'created_on'],
     include: [
       {
         model: Comment,
@@ -35,7 +34,7 @@ router.get('/:id', (req, res) => {
     where: { 
       id: req.params.id,
     },
-    attributes: [ 'id', 'title', 'post_text', 'created_on'],
+    attributes: [ 'id', 'title', 'post_content', 'created_on'],
     include: [
       {
         model: Comment,
@@ -69,12 +68,12 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const newPost = await Post.create({
       title: req.body.title,
-      post_text: req.body.post_text,
+      post_content: req.body.content,
       user_id: req.session.user_id,
     });
     res.status(200).json(newPost);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
@@ -83,11 +82,11 @@ router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title,
-      post_text: req.body.post_text,
+      post_content: req.body.content,
     },
     {
       where: { 
-        id: req.params.id 
+        id: req.params.id,
       },
     }
   )
@@ -110,7 +109,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     const postData = await Post.destroy({
       where: {
         id: req.params.id,
-        user_id: req.sessionStore.user_id,
+        user_id: req.session.user_id,
       },
     });
     if (!postData) {
