@@ -7,7 +7,8 @@
     </div>
     {{#if blog_poster}}
     <div class="delete-comment">
-        <button type="submit" class="btn btn-primary mb-3" id="delete-comment-btn"><i class="fas fa-trash"></i>Delete comment</button>
+        <button type="submit" class="btn btn-primary mb-3" data-id="{{comment.id}}" id="delete-comment-btn">Delete comment</button>
     </div>
+    <script src="/js/delete-comment.js"></script>
     {{/if}}
 </div>

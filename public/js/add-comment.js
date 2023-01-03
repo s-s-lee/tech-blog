@@ -9,7 +9,7 @@ const newComment = async (event) => {
         const response = await fetch ('/api/comments', {
             method: 'POST',
             // can this simply be postId, comment instead
-            body: JSON.stringify({ "post_id": postId, "comment_text": comment }),
+            body: JSON.stringify({ postId, comment }),
             headers: {
                 'Content-Type': 'application/json',
             }

@@ -24,10 +24,10 @@ const addNewPost = async (event) => {
         if (response.ok) {
             newPostButton.classList.remove('hide');
             newPostCard.classList.add('hide');
-            window.location.href = '/dashboard';
+            window.location.reload();
         } else {
-            newPostButton.classList.remove('hide');
-            newPostCard.classList.add('hide');
+            // newPostButton.classList.remove('hide');
+            // newPostCard.classList.add('hide');
             alert('Unable to create new post');
         }
     }

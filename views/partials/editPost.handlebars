@@ -10,8 +10,8 @@
                 <textarea class="form-control" id="edit-post-title" rows="2" placeholder="{{title}}"></textarea>
                 <label for="edit-post-text" class="form-label">Blog Post Content</label>
                 <textarea class="form-control" id="edit-post-text" rows="4" placeholder="{{post_content}}"></textarea>
-                <button type="submit" class="btn btn-primary mt-3" id="edit-post-btn"><i class="fas fa-wrench"></i> Save changes</button>
-                <button type="submit" class="btn btn-danger mt-3" id="delete-post-btn"><i class="fas fa-trash"></i> Delete blog post</button>
+                <button type="submit" class="btn btn-primary mt-3" data-id="{{post.id}}" id="edit-post-btn"><i class="fas fa-wrench"></i> Save changes</button>
+                <button type="submit" class="btn btn-danger mt-3" data-id="{{post.id}}" id="delete-post-btn"><i class="fas fa-trash"></i> Delete blog post</button>
             </form>
             
         </div>
@@ -19,3 +19,4 @@
 </div>
 
 <script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>

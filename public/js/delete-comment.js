@@ -1,7 +1,7 @@
+const commentId = window.location.pathname.split('/').pop();
 const deleteComment = async (event) => {
     event.preventDefault();
-
-    const commentId = window.location.pathname.split('/').pop();
+    
     const response = await fetch (`/api/comments/${commentId}`, {
         method: 'DELETE',
     });
