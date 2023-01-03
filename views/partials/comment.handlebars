@@ -1,0 +1,13 @@
+<div class="comments mx-3">
+    <div class="comments-card">
+        <p>{{comment_text}}</p>
+    </div>
+    <div class="comment-user">
+        <p>{{user.username}}, {{format_date created_on}}</p>
+    </div>
+    {{#if blog_poster}}
+    <div class="delete-comment">
+        <button type="submit" class="btn btn-primary mt-3" id="delete-comment-btn"><i class="fas fa-trash"></i>Delete comment</button>
+    </div>
+    {{/if}}
+</div>

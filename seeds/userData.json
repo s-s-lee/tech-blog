@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "username": "sneakyturtle",
+        "email": "sneakyturtle@turtle.com",
+        "password": "abcd1234"
+    },
+    {
+        "id": 2,
+        "username": "lazyturtle",
+        "email": "lazyturtle@turtle.com",
+        "password": "efgh5678"
+    },
+    {
+        "id": 3,
+        "username": "surprisedturtle",
+        "email": "surprisedturtle@turtle.com",
+        "password": "ijkl9101"
+    }
+]

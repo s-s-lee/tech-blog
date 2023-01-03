@@ -1,0 +1,49 @@
+{{#if blog_poster}}
+<a class="back-to-dashboard" href="/dashboard">Go back to Dashboard</a>
+<div class="edit-post" id="edit-post-card">
+    <div class="card">
+        <div class="card-header text-center">
+            <h3 class="card-title">Editing</h3>
+        </div>
+        <div class="card-body">
+            <form class="p-2" id="new-post-form">
+                <label for="edit-post-title" class="form-label">Blog Post Title</label>
+                <textarea class="form-control" rows="2" placeholder="{{title}}"></textarea>
+                <label for="edit-post-text" class="form-label">Blog Post Content</label>
+                <textarea class="form-control" rows="4" placeholder="{{post_text}}"></textarea>                
+            </form>
+            <button type="submit" class="new-post-btn btn btn-primary mt-3" id="edit-post-btn"><i class="fas fa-wrench"></i> Edit blog post</button>
+            <button type="submit" class="new-post-btn btn btn-danger mt-3" id="delete-post-btn"><i class="fas fa-trash"></i> Delete blog post</button>
+        </div>
+    </div>
+</div>
+
+{{#each comments as |comment|}}
+{{> comment}}
+{{/each}}
+{{> addComment}}
+<script src="../js/edit-post.js"></script>
+
+{{else}}
+
+<div class="post-entire">
+    <div class="card">
+        <div class="card-header text-center">
+            <h3 class="card-title"><a href="/posts/{{id}}">{{title}}</a></h3>
+        </div>
+        <div class="card-date mx-3">
+            <p class="card-text"><small class="text-muted">Posted by {{user.username}} on {{format_date created_on}}</small></p>
+        </div>
+        <div class="card-body">
+            <p>{{post_text}}</p>
+        </div>
+        {{#each comments as |comment|}}
+        {{> comment}}
+        {{/each}}
+        {{#if logged_in}}
+            {{> addComment}}
+        {{/if}}
+    </div>
+</div>
+
+{{/if}}

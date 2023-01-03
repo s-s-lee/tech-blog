@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "comment_text": "Awesome!",
+        "created_on": "12.14.2022",
+        "user_id": 777,
+        "post_id": 1
+    },
+    {
+        "id": 2,
+        "comment_text": "Very cool",
+        "created_on": "12.21.2022",
+        "user_id": 555,
+        "post_id": 1
+    },
+    {
+        "id": 3,
+        "comment_text": "Amazing",
+        "created_on": "12.31.2022",
+        "user_id": 888,
+        "post_id": 1
+    }
+]
