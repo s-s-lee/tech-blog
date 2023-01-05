@@ -3,7 +3,7 @@ An example of a tech blog to post insights and comment on posts
 
 ## Preview
 
-
+<img alt="screenshot of Tech Blog website" src="./public/assets/tech-blog-preview.png" />
 
 Link to deployed app: https://mighty-citadel-65868.herokuapp.com/
 
@@ -56,8 +56,8 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 
 ## Tech used
-* Express.js
-* Heroku
+* [Express.js](https://expressjs.com/)
+* [Heroku](https://www.heroku.com/)
 * [Handlebars](https://www.npmjs.com/package/express-handlebars)
 * [MySQL2](https://www.npmjs.com/package/mysql2)
 * [Sequelize](https://www.npmjs.com/package/sequelize)
@@ -71,11 +71,17 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ## Installation
 
 To start, clone the repo.
+
 Install the npm dependencies using `npm i` in the CLI. 
+
 Login to MySQL with `mysql -u yourUsernameHere -p` and enter the password in your .env file accordingly. 
+
 Setup the database schema file with `source db/schema.sql`.
+
 Exit MySQL with `quit`.
+
 Seed the database with `node seeds/seed.js`.
+
 Finally, start the server with `npm start`.
 
 
